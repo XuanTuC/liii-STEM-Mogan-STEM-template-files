@@ -1,0 +1,273 @@
+<TMU|<tuple|1.1.0|2025.0.15>>
+
+<style|<tuple|generic|number-europe|british|preview-ref|smart-ref|number-long-article>>
+
+<\body>
+  <\hide-preamble>
+    \;
+
+    <assign|theorem-text|<macro|<with|font-series|bold|font-shape|small-caps|定理>>>
+
+    <assign|definition-text|<macro|<with|font-series|bold|font-shape|small-caps|定义>>>
+
+    <assign|proposition-text|<macro|<with|font-series|bold|font-shape|small-caps|命题>>>
+
+    <assign|lemma-text|<macro|<with|font-series|bold|font-shape|small-caps|引理>>>
+
+    <assign|corollary-text|<macro|<with|font-series|bold|font-shape|small-caps|推论>>>
+
+    <assign|proof-text|<macro|<with|font-series|bold|font-shape|small-caps|证明>>>
+
+    <assign|axiom-text|<macro|<with|font-series|bold|font-shape|small-caps|公理>>>
+
+    <assign|assumption-text|<macro|<with|font-series|bold|font-shape|small-caps|假设>>>
+
+    <assign|notation-text|<macro|<with|font-series|bold|font-shape|small-caps|记号>>>
+
+    <assign|convention-text|<macro|<with|font-series|bold|font-shape|small-caps|约定>>>
+
+    <assign|remark-text|<macro|<with|font-series|bold|font-shape|small-caps|注记>>>
+
+    <assign|note-text|<macro|<with|font-series|bold|font-shape|small-caps|注释>>>
+
+    <assign|example-text|<macro|<with|font-series|bold|font-shape|small-caps|例>>>
+
+    <assign|warning-text|<macro|<with|font-series|bold|font-shape|small-caps|警告>>>
+
+    <assign|acknowledgments-text|<macro|<with|font-series|bold|font-shape|small-caps|致谢>>>
+
+    <assign|exercise-text|<macro|<with|font-series|bold|font-shape|small-caps|练习>>>
+
+    <assign|problem-text|<macro|<with|font-series|bold|font-shape|small-caps|问题>>>
+
+    <assign|question-text|<macro|<with|font-series|bold|font-shape|small-caps|提问>>>
+
+    <assign|solution-text|<macro|<with|font-series|bold|font-shape|small-caps|解答>>>
+
+    <assign|answer-text|<macro|<with|font-series|bold|font-shape|small-caps|答案>>>
+
+    <assign|theorem|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-theorem>||<compound|render-theorem|<compound|theorem-numbered|<compound|theorem-text>|<compound|the-theorem>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|definition|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-definition>||<compound|render-remark|<compound|definition-numbered|<compound|definition-text>|<compound|the-definition>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|proposition|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <\surround|<compound|next-proposition>|>
+          <compound|render-theorem|<compound|proposition-numbered|<compound|proposition-text>|<compound|the-proposition>>|<arg|body>>
+        </surround>
+      </ornamented>>
+    </macro>>
+
+    <assign|lemma|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-lemma>||<compound|render-theorem|<compound|lemma-numbered|<compound|lemma-text>|<compound|the-lemma>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|corollary|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-corollary>||<compound|render-theorem|<compound|corollary-numbered|<compound|corollary-text>|<compound|the-corollary>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|proof|<\macro|body>
+      <\inactive*>
+        <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+          <render-proof|<proof-text>|<arg|body>>
+        </ornamented>>
+      </inactive*>
+    </macro>>
+
+    <assign|axiom|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-axiom>||<compound|render-theorem|<compound|axiom-numbered|<compound|axiom-text>|<compound|the-axiom>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|assumption|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-assumption>||<compound|render-remark|<compound|assumption-numbered|<compound|assumption-text>|<compound|the-assumption>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|notation|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-notation>||<compound|render-theorem|<compound|notation-numbered|<compound|notation-text>|<compound|the-notation>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|convention|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-convention>||<compound|render-remark|<compound|convention-numbered|<compound|convention-text>|<compound|the-convention>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|remark|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-remark>||<compound|render-remark|<compound|remark-numbered|<compound|remark-text>|<compound|the-remark>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|note|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-note>||<compound|render-remark|<compound|note-numbered|<compound|note-text>|<compound|the-note>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|example|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-example>||<compound|render-remark|<compound|example-numbered|<compound|example-text>|<compound|the-example>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|warning|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-warning>||<compound|render-remark|<compound|warning-numbered|<compound|warning-text>|<compound|the-warning>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|acknowledgments*|<\macro|body>
+      <\inactive*>
+        <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+          <compound|render-remark|<compound|acknowledgments-unnumbered|<compound|acknowledgments-text>>|<arg|body>>
+        </ornamented>>
+      </inactive*>
+
+      \;
+    </macro>>
+
+    <assign|exercise|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-exercise>||<compound|render-exercise|<compound|exercise-numbered|<compound|exercise-text>|<compound|the-exercise>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|problem|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-problem>||<compound|render-exercise|<compound|problem-numbered|<compound|problem-text>|<compound|the-problem>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|question|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <surround|<compound|next-question>||<compound|render-remark|<compound|question-numbered|<compound|question-text>|<compound|the-question>>|<arg|body>>>
+      </ornamented>>
+    </macro>>
+
+    <assign|solution*|<\macro|body>
+      <\inactive*>
+        <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+          <compound|render-exercise|<compound|solution-unnumbered|<compound|solution-text>>|<arg|body>>
+        </ornamented>>
+      </inactive*>
+    </macro>>
+
+    <assign|answer*|<\macro|body>
+      <with|ornament-hpadding|4spc|ornament-vpadding|3spc|ornament-shadow-color|#5f4688|ornament-sunny-color|#5f4688|ornament-color|#eeeaf4|<\ornamented>
+        <compound|render-remark|<compound|answer-unnumbered|<compound|answer-text>>|<arg|body>>
+      </ornamented>>
+    </macro>>
+  </hide-preamble>
+
+  <\theorem>
+    \;
+  </theorem>
+
+  <\proposition>
+    \;
+  </proposition>
+
+  <\lemma>
+    \;
+  </lemma>
+
+  <\corollary>
+    \;
+  </corollary>
+
+  <\proof>
+    \;
+  </proof>
+
+  <\axiom>
+    \;
+  </axiom>
+
+  <\assumption>
+    \;
+  </assumption>
+
+  <\definition>
+    \;
+  </definition>
+
+  <\notation>
+    \;
+  </notation>
+
+  <\convention>
+    \;
+  </convention>
+
+  <\remark>
+    \;
+  </remark>
+
+  <\note>
+    \;
+  </note>
+
+  <\example>
+    \;
+  </example>
+
+  <\warning>
+    \;
+  </warning>
+
+  <\acknowledgments*>
+    \;
+  </acknowledgments*>
+
+  <\exercise>
+    \;
+  </exercise>
+
+  <\problem>
+    \;
+  </problem>
+
+  <\question>
+    \;
+  </question>
+
+  <\solution*>
+    \;
+  </solution*>
+
+  <\answer*>
+    \;
+  </answer*>
+
+  \;
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|papyrus>
+    <associate|page-screen-margin|false>
+    <associate|par-columns|1>
+    <associate|preamble|false>
+  </collection>
+</initial>
+</TMU|</｜｜DSML｜｜parameter>
+</｜｜DSML｜｜invoke>
+</｜｜DSML｜｜tool_calls>
